@@ -11,7 +11,7 @@ creds_dict = json.loads(st.secrets["credentials"])
 sheet_id = st.secrets["GOOGLE_SHEET_ID"]
 
 creds = Credentials.from_service_account_info(creds_dict,
-import streamlit as st
+
 from oauth2client.service_account import ServiceAccountCredentials
 
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
