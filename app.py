@@ -19,7 +19,7 @@ scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/au
 # Đọc credentials từ biến môi trường (secrets)
 credentials_dict = json.loads(st.secrets["credentials"])
 credentials = ServiceAccountCredentials.from_json_keyfile_dict(credentials_dict, scope)
-)
+
 client = gspread.authorize(creds)
 sheet = client.open_by_key(sheet_id).sheet1
 
